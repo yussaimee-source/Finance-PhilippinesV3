@@ -88,56 +88,83 @@ ul { list-style: none; }
 .hero {
   position: relative; min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(150deg, #061840 0%, var(--blue-deep) 40%, var(--blue-mid) 100%);
+  /*
+   * Free background image options (all free under Unsplash License):
+   * Option A — Abstract blue AI network (Conny Schneider, Unsplash):
+   *   https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=1920&q=80
+   * Option B — Glowing neural nodes on dark (Growtika, Unsplash):
+   *   https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1920&q=80
+   * Option C — Blue light data streams (Alina Grubnyak, Unsplash):
+   *   https://images.unsplash.com/photo-1545987796-200677ee1011?w=1920&q=80
+   *
+   * Using Option A as primary — abstract blue AI circuit network, dark enough for text.
+   * Change the URL below to swap to a different image.
+   */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(4, 14, 45, 0.82) 0%,
+      rgba(11, 36, 99, 0.75) 50%,
+      rgba(8, 25, 65, 0.85) 100%
+    ),
+    url('https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=1920&q=80')
+    center center / cover no-repeat;
   overflow: hidden; text-align: center; padding: 80px 24px 70px;
 }
+
+/* Subtle animated particle grid overlay */
 .hero-bg-grid {
   position: absolute; inset: 0; pointer-events: none;
-  background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 56px 56px;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
 }
 .hero-glow-left {
-  position: absolute; width: 640px; height: 640px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(57,181,74,0.11) 0%, transparent 70%);
-  left: -160px; top: 5%; pointer-events: none;
+  position: absolute; width: 700px; height: 700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(57,181,74,0.10) 0%, transparent 65%);
+  left: -200px; top: 0%; pointer-events: none;
 }
 .hero-glow-right {
-  position: absolute; width: 520px; height: 520px; border-radius: 50%;
-  background: radial-gradient(circle, rgba(200,146,42,0.14) 0%, transparent 70%);
-  right: -100px; bottom: 5%; pointer-events: none;
+  position: absolute; width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,146,42,0.13) 0%, transparent 65%);
+  right: -120px; bottom: 0%; pointer-events: none;
 }
 .hero-content { position: relative; z-index: 2; max-width: 980px; }
 
 .hero-theme {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(3.6rem, 8.5vw, 6.4rem);
+  font-size: clamp(3.8rem, 9vw, 6.8rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.0;
   letter-spacing: -0.03em;
   margin-bottom: 40px;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.5);
 }
-.hero-theme span { color: var(--gold-lt); }
+.hero-theme span {
+  color: var(--gold-lt);
+  display: block;
+}
 
 .hero-meta-strip {
   display: flex; justify-content: center; align-items: center;
-  flex-wrap: wrap; gap: 6px 12px; margin-bottom: 48px;
+  flex-wrap: wrap; gap: 6px 14px; margin-bottom: 52px;
 }
 .hero-meta-item {
-  display: flex; align-items: center; gap: 9px;
-  color: rgba(255,255,255,0.92);
-  font-size: 1.15rem;
+  display: flex; align-items: center; gap: 10px;
+  color: rgba(255,255,255,0.95);
+  font-size: 1.2rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.01em;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.4);
 }
-.hero-meta-item i { color: var(--gold-lt); font-size: 1.05rem; }
-.hero-meta-sep { color: rgba(255,255,255,0.35); font-size: 1.5rem; margin: 0 4px; }
+.hero-meta-item i { color: var(--gold-lt); font-size: 1.1rem; }
+.hero-meta-sep { color: rgba(255,255,255,0.4); font-size: 1.6rem; line-height: 1; }
 .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .hero-scroll-hint {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
-  color: rgba(255,255,255,0.4); font-size: 1.1rem; animation: bounce 2.2s infinite;
+  color: rgba(255,255,255,0.45); font-size: 1.1rem; animation: bounce 2.2s infinite;
 }
 @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(9px)} }
 
@@ -431,7 +458,7 @@ ul { list-style: none; }
   .agenda-time { padding: 16px 0 4px; text-align: left; }
   .agenda-body { margin-left: 0; }
   .hero { min-height: auto; padding: 80px 20px 70px; }
-  .hero-theme { font-size: clamp(2.4rem, 11vw, 3.4rem); }
+  .hero-theme { font-size: clamp(2.6rem, 11vw, 3.6rem); }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-meta-strip { flex-direction: column; gap: 8px; }
   .hero-meta-sep { display: none; }
