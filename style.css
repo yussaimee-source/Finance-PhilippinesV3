@@ -66,16 +66,7 @@ ul { list-style: none; }
 .topbar-social a:hover { color: var(--gold-lt); }
 
 /* ---------- LOGO BANNER ---------- */
-.logo-banner {
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  padding: 18px 0;
-}
-.logo-banner-inner {
-  max-width: 1160px; margin: 0 auto; padding: 0 24px;
-  display: flex; align-items: center;
-}
-.logo-banner-img { height: 64px; width: auto; }
+/* (removed) */
 
 /* ---------- NAVBAR ---------- */
 .navbar {
@@ -85,17 +76,17 @@ ul { list-style: none; }
 }
 .navbar.scrolled { box-shadow: var(--sh-md); }
 .nav-inner { display: flex; align-items: center; gap: 16px; height: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-/* Hide logo in navbar — it's in the banner above */
-.nav-logo { display: none; }
-.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-logo { flex-shrink: 0; }
+.nav-logo-img { height: 44px; width: auto; }
+.nav-links { display: flex; align-items: center; gap: 2px; margin-left: auto; }
 .nav-links a { padding: 8px 12px; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.04em; color: var(--text); border-radius: var(--r); text-transform: uppercase; }
 .nav-links a:hover { color: var(--blue-mid); background: var(--off-white); }
-.nav-ctas { display: flex; gap: 10px; margin-left: auto; }
+.nav-ctas { display: flex; gap: 10px; }
 .nav-toggle { display: none; background: none; border: none; font-size: 1.4rem; color: var(--blue-deep); cursor: pointer; margin-left: auto; }
 
 /* ---------- HERO ---------- */
 .hero {
-  position: relative; min-height: 88vh;
+  position: relative; min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
   background: linear-gradient(150deg, #061840 0%, var(--blue-deep) 40%, var(--blue-mid) 100%);
   overflow: hidden; text-align: center; padding: 80px 24px 70px;
@@ -116,27 +107,34 @@ ul { list-style: none; }
   background: radial-gradient(circle, rgba(200,146,42,0.14) 0%, transparent 70%);
   right: -100px; bottom: 5%; pointer-events: none;
 }
-.hero-content { position: relative; z-index: 2; max-width: 900px; }
+.hero-content { position: relative; z-index: 2; max-width: 980px; }
 
 .hero-theme {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(3rem, 7.5vw, 5.4rem);
-  font-weight: 800;
+  font-size: clamp(3.6rem, 8.5vw, 6.4rem);
+  font-weight: 900;
   color: var(--white);
-  line-height: 1.05;
+  line-height: 1.0;
   letter-spacing: -0.03em;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
-.hero-theme span { color: var(--gold-lt); display: block; }
+.hero-theme span { color: var(--gold-lt); }
 
 .hero-meta-strip {
   display: flex; justify-content: center; align-items: center;
-  flex-wrap: wrap; gap: 6px 8px; margin-bottom: 44px;
+  flex-wrap: wrap; gap: 6px 12px; margin-bottom: 48px;
 }
-.hero-meta-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 1rem; font-weight: 400; }
-.hero-meta-item i { color: var(--gold-lt); font-size: 1rem; }
-.hero-meta-sep { color: rgba(255,255,255,0.3); font-size: 1.3rem; margin: 0 4px; }
-.hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.hero-meta-item {
+  display: flex; align-items: center; gap: 9px;
+  color: rgba(255,255,255,0.92);
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.01em;
+}
+.hero-meta-item i { color: var(--gold-lt); font-size: 1.05rem; }
+.hero-meta-sep { color: rgba(255,255,255,0.35); font-size: 1.5rem; margin: 0 4px; }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .hero-scroll-hint {
   position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
   color: rgba(255,255,255,0.4); font-size: 1.1rem; animation: bounce 2.2s infinite;
@@ -433,7 +431,7 @@ ul { list-style: none; }
   .agenda-time { padding: 16px 0 4px; text-align: left; }
   .agenda-body { margin-left: 0; }
   .hero { min-height: auto; padding: 80px 20px 70px; }
-  .hero-theme { font-size: clamp(2.2rem, 10vw, 3rem); }
+  .hero-theme { font-size: clamp(2.4rem, 11vw, 3.4rem); }
   .hero-buttons { flex-direction: column; align-items: center; }
   .hero-meta-strip { flex-direction: column; gap: 8px; }
   .hero-meta-sep { display: none; }
