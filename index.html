@@ -245,51 +245,49 @@
       <span class="section-eyebrow">Faculty</span>
       <h2 class="section-title">Speakers</h2>
       <div class="title-bar"></div>
-      <p class="section-sub">Senior leaders, regulators, and infrastructure providers from across the Philippines and ASEAN.</p>
+      <p class="section-sub">Senior leaders and regulators shaping the future of Philippine banking.</p>
     </div>
 
-    <!-- Featured speakers (large cards) — Ana Maria keynote + Marlon with bio popups -->
-    <div class="speakers-grid-featured">
+    <!-- 2 speakers side by side -->
+    <div class="speakers-duo">
 
-      <!-- Ana Maria Aboitiz Delgado — Keynote -->
-      <div class="speaker-card speaker-card-keynote">
-        <div class="speaker-keynote-badge"><i class="fa-solid fa-star"></i> Keynote Speaker</div>
-        <div class="speaker-img-wrap">
-          <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Ana-Maria.webp" alt="Ana Maria Aboitiz Delgado" loading="lazy"
-            onerror="this.src='https://placehold.co/220x280/0b2463/ffffff?text=Ana+Maria'"/>
+      <!-- Ana Maria — Keynote -->
+      <div class="speaker-duo-card speaker-duo-keynote">
+        <div class="speaker-duo-badge"><i class="fa-solid fa-star"></i> Keynote Speaker</div>
+        <div class="speaker-duo-photo">
+          <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Ana-Maria.webp"
+               alt="Ana Maria Aboitiz Delgado" loading="lazy"
+               onerror="this.src='https://placehold.co/320x380/0b2463/ffffff?text=Ana+Maria'"/>
         </div>
-        <div class="speaker-info">
-          <h4>Ana Maria Aboitiz Delgado</h4>
-          <p>President &amp; CEO, UnionBank of the Philippines; President, Bankers Association of the Philippines</p>
-          <button class="btn-bio" onclick="openBio('ana')"><i class="fas fa-user"></i> View Bio</button>
-        </div>
-      </div>
-
-      <!-- Marlon P. Sorongon -->
-      <div class="speaker-card">
-        <div class="speaker-img-wrap">
-          <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Marlon-P.webp" alt="Marlon P. Sorongon" loading="lazy"
-            onerror="this.src='https://placehold.co/220x280/0b2463/ffffff?text=Marlon'"/>
-        </div>
-        <div class="speaker-info">
-          <h4>Marlon P. Sorongon</h4>
-          <p>Chief Information Security Officer, Maybank Philippines</p>
-          <button class="btn-bio" onclick="openBio('marlon')"><i class="fas fa-user"></i> View Bio</button>
+        <div class="speaker-duo-info">
+          <h3>Ana Maria Aboitiz Delgado</h3>
+          <p class="speaker-duo-role">President &amp; CEO, UnionBank of the Philippines</p>
+          <p class="speaker-duo-org">President, Bankers Association of the Philippines (2026–2027)</p>
+          <p class="speaker-duo-bio">Ana Maria Aboitiz-Delgado leads UnionBank as President &amp; CEO since January 2025, following two decades at the institution. In March 2026 she became the first woman elected President of the Bankers Association of the Philippines in its nearly 80-year history. Named among Fortune's 100 Most Powerful Women in Asia (2025), she champions a human-centred approach to AI and digital transformation. At Finance Philippines 2026 she delivers the keynote address on balancing AI-led growth with a new generation of risks in Philippine banking.</p>
+          <button class="btn-bio" onclick="openBio('ana')"><i class="fas fa-id-card"></i> Full Biography</button>
         </div>
       </div>
 
-      <!-- David R. Hardoon -->
-      <div class="speaker-card">
-        <div class="speaker-img-wrap"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/hardoon.webp" alt="David R. Hardoon" loading="lazy" onerror="this.src='https://placehold.co/220x280/0b2463/ffffff?text=Speaker'"/></div>
-        <div class="speaker-info"><h4>David R. Hardoon</h4><p>Global Head of AI Enablement, Standard Chartered Bank</p></div>
+      <!-- Marlon -->
+      <div class="speaker-duo-card">
+        <div class="speaker-duo-photo">
+          <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Marlon-P.webp"
+               alt="Marlon P. Sorongon" loading="lazy"
+               onerror="this.src='https://placehold.co/320x380/133e8e/ffffff?text=Marlon'"/>
+        </div>
+        <div class="speaker-duo-info">
+          <h3>Marlon P. Sorongon</h3>
+          <p class="speaker-duo-role">Chief Information Security Officer</p>
+          <p class="speaker-duo-org">Maybank Philippines</p>
+          <p class="speaker-duo-bio">Marlon P. Sorongon is the CISO of Maybank Philippines, responsible for the bank's information security strategy, cyber risk management, and defence frameworks against AI-driven fraud, scam networks, and advanced persistent threats. He brings a practitioner's perspective to the intersection of AI and cybersecurity in banking, sharing insights on building resilient, trust-preserving security architectures as autonomous systems become embedded across banking operations.</p>
+          <button class="btn-bio" onclick="openBio('marlon')"><i class="fas fa-id-card"></i> Full Biography</button>
+        </div>
       </div>
 
-      <!-- Mamerto E. Tangonan -->
-      <div class="speaker-card">
-        <div class="speaker-img-wrap"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/tangonan.webp" alt="Mamerto E. Tangonan" loading="lazy" onerror="this.src='https://placehold.co/220x280/0b2463/ffffff?text=Speaker'"/></div>
-        <div class="speaker-info"><h4>Mamerto E. Tangonan</h4><p>Deputy Governor, Payments &amp; Currency Management, BSP</p></div>
-      </div>
+    </div><!-- /speakers-duo -->
 
+    <div class="section-footer">
+      <a href="https://www.theasianbanker.com/finance-philippines-2026/speakers" class="btn btn-primary" target="_blank">View All Speakers</a>
     </div>
 
     <!-- BIO MODALS -->
@@ -300,18 +298,18 @@
       <div class="bio-modal-inner">
         <div class="bio-modal-photo">
           <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Ana-Maria.webp" alt="Ana Maria Aboitiz Delgado"
-            onerror="this.src='https://placehold.co/180x220/0b2463/ffffff?text=Ana+Maria'"/>
-          <span class="bio-modal-badge"><i class="fa-solid fa-star"></i> Keynote Speaker</span>
+            onerror="this.src='https://placehold.co/160x192/0b2463/ffffff?text=Ana+Maria'"/>
+          <span class="bio-modal-badge"><i class="fa-solid fa-star"></i> Keynote</span>
         </div>
         <div class="bio-modal-content">
           <h3>Ana Maria Aboitiz Delgado</h3>
-          <p class="bio-modal-title">President &amp; CEO, UnionBank of the Philippines<br/>President, Bankers Association of the Philippines (2026–2027)</p>
+          <p class="bio-modal-title">President &amp; CEO, UnionBank of the Philippines<br/>President, Bankers Association of the Philippines 2026–2027</p>
           <div class="bio-modal-text">
-            <p>Ana Maria Aboitiz-Delgado is the President and Chief Executive Officer of Union Bank of the Philippines, a role she assumed in January 2025 following more than two decades at the institution. She began her career at UnionBank as a management trainee in 2003 and rose through the ranks across small and medium enterprise banking, retail and institutional finance, customer experience, and digital channels.</p>
-            <p>In March 2026, she was elected President of the Bankers Association of the Philippines (BAP) for the 2026–2027 term, becoming the first woman to lead the organisation in its nearly 80-year history. She succeeded Jose Teodoro K. Limcaoco of BPI.</p>
-            <p>Aboitiz-Delgado is a graduate of Boston College (undergraduate, Art History) and holds an MBA from New York University's Stern School of Business (2010). Prior to UnionBank, she was at Citibank NA in product management.</p>
-            <p>In 2025, she was named one of Fortune magazine's 100 Most Powerful Women in Asia, ranking 94th — the youngest Filipino and only first-time honouree from the Philippines on the list. She champions a human-centred approach to digital transformation, and has guided UnionBank through its digital evolution, including the acquisition of Citibank NA's local consumer business.</p>
-            <p>At Finance Philippines 2026, she will deliver the keynote address on the future of AI in Philippine banking, including how the sector must balance the acceleration of digitisation with a new generation of risks that extend beyond individual institutions and national borders.</p>
+            <p>Ana Maria Aboitiz-Delgado is the President and Chief Executive Officer of Union Bank of the Philippines, a role she assumed in January 2025 following more than two decades at the institution. She began her career at UnionBank as a management trainee in 2003, rising through roles in SME banking, retail and institutional finance, customer experience, and digital channels.</p>
+            <p>In March 2026 she was elected President of the Bankers Association of the Philippines (BAP) for the 2026–2027 term — the first woman to lead the organisation in its nearly 80-year history. She succeeded Jose Teodoro K. Limcaoco of BPI.</p>
+            <p>Aboitiz-Delgado holds a bachelor's degree from Boston College and an MBA from New York University's Stern School of Business (2010). Prior to UnionBank she was at Citibank NA in product management.</p>
+            <p>In 2025 she was named one of Fortune magazine's 100 Most Powerful Women in Asia (ranked 94th) — the youngest Filipino and only first-time Philippine honouree. She has guided UnionBank's digital transformation including the acquisition of Citibank NA's local consumer business.</p>
+            <p>At Finance Philippines 2026 she delivers the keynote on the future of AI in Philippine banking, addressing how the sector must balance the acceleration of digitisation with a new generation of risks that extend beyond individual institutions and national borders.</p>
           </div>
         </div>
       </div>
@@ -322,44 +320,24 @@
       <div class="bio-modal-inner">
         <div class="bio-modal-photo">
           <img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Marlon-P.webp" alt="Marlon P. Sorongon"
-            onerror="this.src='https://placehold.co/180x220/0b2463/ffffff?text=Marlon'"/>
+            onerror="this.src='https://placehold.co/160x192/133e8e/ffffff?text=Marlon'"/>
         </div>
         <div class="bio-modal-content">
           <h3>Marlon P. Sorongon</h3>
           <p class="bio-modal-title">Chief Information Security Officer (CISO), Maybank Philippines</p>
           <div class="bio-modal-text">
-            <p>Marlon P. Sorongon is the Chief Information Security Officer (CISO) of Maybank Philippines. He is a seasoned cybersecurity and information security professional with extensive experience in the Philippine banking and financial services sector.</p>
-            <p>In his role at Maybank Philippines, Marlon is responsible for overseeing the bank's information security strategy, managing cyber risk, and ensuring robust defence frameworks are in place to protect the institution's digital assets and customer data against an increasingly complex threat landscape — including AI-driven fraud, scam networks, and advanced persistent threats.</p>
-            <p>Marlon brings a practitioner's perspective to the evolving intersection of AI and cybersecurity in banking, and will share insights on how financial institutions can build resilient, trust-preserving security architectures as autonomous AI systems become embedded across banking operations.</p>
+            <p>Marlon P. Sorongon is the Chief Information Security Officer of Maybank Philippines, a senior leadership role in which he is responsible for the institution's information security strategy, cyber risk management, and resilience frameworks across its Philippine operations.</p>
+            <p>He oversees defences against an increasingly complex threat landscape — including AI-driven fraud, industrialised scam networks, deepfake-enabled identity attacks, and advanced persistent threats targeting financial institutions in the Philippines and ASEAN.</p>
+            <p>Marlon brings a practitioner's perspective to the evolving intersection of AI and cybersecurity in banking. At Finance Philippines 2026 he will share insights on how financial institutions can build resilient, trust-preserving security architectures as autonomous AI systems become embedded across banking operations — and what it means for liability, controls, and customer trust when AI agents get it wrong.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Past speakers row (smaller, compact, 6-col) -->
-    <div class="past-speakers-header">
-      <span class="section-eyebrow">Past Speakers</span>
-      <div class="past-speakers-line"></div>
-    </div>
-    <div class="speakers-grid-past">
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Nichel-Gaba.webp" alt="Nichel Gaba" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Nichel Gaba</h5><p>Founder &amp; CEO, PDAX</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Biswa-Banik.webp" alt="Biswa Banik" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Biswa Banik</h5><p>Group CDO, Tonik Bank</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Oliver-V.webp" alt="Oliver V. Chato" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Oliver V. Chato</h5><p>Director III, ICT Dept., SEC</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Rahul-Bhargava.webp" alt="Rahul Bhargava" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Rahul Bhargava</h5><p>World Bank Consultant, AI 2030</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Foo-Boon.png" alt="Foo Boon Ping" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Foo Boon Ping</h5><p>President &amp; MD, The Asian Banker</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Mario-R.webp" alt="Mario R. Domingo" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Mario R. Domingo</h5><p>OIC &amp; CCO, UBX Philippines</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Askari-Brown.webp" alt="Askari Brown" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Askari Brown</h5><p>Head of Solution Consulting APAC, ACI Worldwide</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Ika-Tjahjana.webp" alt="Ika Tjahjana" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Ika Tjahjana</h5><p>Principal Solutions Engineer APAC, Mambu</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Michael-Araneta.webp" alt="Michael Araneta" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Michael Araneta</h5><p>Lead ASEAN Banking, AWS</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Francis-Ongpin.webp" alt="Francis Ongpin-Lock Chiu" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Francis Ongpin-Lock Chiu</h5><p>First VP, BDO Unibank</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Franco-G.webp" alt="Franco G. Nazareno" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Franco G. Nazareno</h5><p>CTO, OwnBank</p></div></div>
-      <div class="speaker-card-sm"><div class="speaker-img-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/speaker-2025/Esel-De.webp" alt="Esel de Sagun-Madrid" loading="lazy" onerror="this.src='https://placehold.co/160x180/0b2463/ffffff?text=Speaker'"/></div><div class="speaker-info-sm"><h5>Esel de Sagun-Madrid</h5><p>Head of Data Science &amp; AI COE, Security Bank</p></div></div>
-    </div>
-    <div class="section-footer"><a href="https://www.theasianbanker.com/finance-philippines-2026/speakers" class="btn btn-primary" target="_blank">View All Speakers</a></div>
   </div>
 </section>
 
-<!-- ===== SPONSORS & PARTNERS — UPDATED SECTION ===== -->
+<!-- SPONSORS & PARTNERS -->
 <section class="section sponsors-section" id="sponsors">
   <div class="container">
     <div class="section-header">
@@ -368,23 +346,23 @@
       <div class="title-bar"></div>
     </div>
 
-    <!-- Current sponsors -->
-    <div class="sponsors-current-label">Current Sponsors &amp; Partners</div>
-    <div class="sponsors-grid-current">
-      <a href="javascript:void(0)" class="sponsor-logo-lg"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/bap-logo.webp" alt="Bankers Association of the Philippines" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors/bap-logo.png'"/></a>
-      <a href="https://mambu.com/en/partner/amazon-web-services" class="sponsor-logo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/aws-mambu.webp" alt="AWS Mambu" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/aws-mambu.png'"/></a>
-      <a href="https://www.cryptonewsz.com/" class="sponsor-logo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/Cryptonewsz.webp" alt="Cryptonewsz" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/Cryptonewsz.png'"/></a>
-      <a href="https://www.timesofai.com/" class="sponsor-logo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/timesofai-logo.webp" alt="Times of AI" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/timesofai-logo.png'"/></a>
+    <!-- Current 2026 sponsors — large, prominent -->
+    <p class="sponsors-tier-label">2026 Sponsors &amp; Partners</p>
+    <div class="sponsors-row-current">
+      <a href="javascript:void(0)" class="slogo slogo-lg"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/bap-logo.webp" alt="Bankers Association of the Philippines" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors/bap-logo.png'"/></a>
+      <a href="https://mambu.com/en/partner/amazon-web-services" class="slogo slogo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/aws-mambu.webp" alt="AWS Mambu" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/aws-mambu.png'"/></a>
+      <a href="https://www.cryptonewsz.com/" class="slogo slogo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/Cryptonewsz.webp" alt="Cryptonewsz" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/Cryptonewsz.png'"/></a>
+      <a href="https://www.timesofai.com/" class="slogo slogo-lg" target="_blank"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/timesofai-logo.webp" alt="Times of AI" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/timesofai-logo.png'"/></a>
     </div>
 
-    <!-- Previous sponsors -->
-    <div class="sponsors-prev-bar">
-      <span class="sponsors-prev-label">Previous Sponsors &amp; Partners</span>
-      <div class="sponsors-grid-prev">
-        <div class="sponsor-logo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/ACI.webp" alt="ACI Worldwide" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/ACI.png'"/></div>
-        <div class="sponsor-logo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/CTB-Logo-new.webp" alt="CTB" loading="lazy" onerror="this.style.display='none'"/></div>
-        <div class="sponsor-logo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/iDEA.webp" alt="iDEA" loading="lazy" onerror="this.style.display='none'"/></div>
-        <div class="sponsor-logo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/Media.webp" alt="Business Mirror" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/Media.jpg'"/></div>
+    <!-- Previous sponsors — smaller, in a contained strip -->
+    <div class="sponsors-prev-strip">
+      <p class="sponsors-tier-label sponsors-tier-label-sm">Previous Sponsors &amp; Partners</p>
+      <div class="sponsors-row-prev">
+        <div class="slogo slogo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/ACI.webp" alt="ACI Worldwide" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/ACI.png'"/></div>
+        <div class="slogo slogo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/CTB-Logo-new.webp" alt="CTB" loading="lazy" onerror="this.style.display='none'"/></div>
+        <div class="slogo slogo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/iDEA.webp" alt="iDEA" loading="lazy" onerror="this.style.display='none'"/></div>
+        <div class="slogo slogo-sm"><img src="https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2026/Media.webp" alt="Business Mirror" loading="lazy" onerror="this.src='https://www.theasianbanker.com/finance-philippines-2026/images/sponsors-2025/Media.jpg'"/></div>
       </div>
     </div>
 
@@ -392,7 +370,7 @@
     <div class="sponsor-cta-box">
       <div class="sponsor-cta-text">
         <h3>Elevate Your Presence at Finance Philippines 2026</h3>
-        <p>Access 250+ senior leaders from banks, fintechs, and regulators. Achieve up to <strong>3× more meetings</strong> and <strong>4× more high-value connections</strong> through targeted networking.</p>
+        <p>Download the sponsorship brochure to explore unique opportunities, including access to a diverse audience of senior leaders from banks, payments companies, fintechs, and regulators. Achieve up to <strong>3× more meetings</strong> and <strong>4× more high-value connections</strong>.</p>
       </div>
       <div class="sponsor-cta-btns">
         <a href="https://www.theasianbanker.com/finance-philippines-2026/sponsor-exhibitor-registration" class="btn btn-primary btn-lg" target="_blank">Become a Sponsor</a>
@@ -402,64 +380,55 @@
   </div>
 </section>
 
-<!-- ===== HAVEN'T REGISTERED YET — BOLD CTA ===== -->
+<!-- HAVEN'T REGISTERED YET -->
 <section class="reg-cta-section" id="register-cta">
-  <div class="reg-cta-bg-video">
-    <div class="reg-cta-overlay"></div>
-  </div>
-  <div class="container reg-cta-inner">
+  <div class="reg-cta-glow"></div>
+  <div class="container reg-cta-wrap">
+
+    <!-- Left: headline + stats + buttons -->
     <div class="reg-cta-left">
       <span class="reg-cta-eyebrow"><i class="fas fa-hourglass-half"></i> Don't Miss Out</span>
       <h2 class="reg-cta-title">Haven't Registered Yet?</h2>
-      <p class="reg-cta-sub">Finance Philippines 2026 brings together the leaders shaping the future of banking. Seats are limited — secure your place now.</p>
+      <p class="reg-cta-sub">Finance Philippines 2026 brings together the senior leaders, regulators, and infrastructure providers shaping the future of banking. Secure your seat now.</p>
       <div class="reg-cta-stats">
-        <div class="reg-cta-stat">
-          <span class="stat-num">13</span>
-          <span class="stat-label">August 2026</span>
-        </div>
-        <div class="reg-cta-stat-div"></div>
-        <div class="reg-cta-stat">
-          <span class="stat-num">1</span>
-          <span class="stat-label">Full Day</span>
-        </div>
-        <div class="reg-cta-stat-div"></div>
-        <div class="reg-cta-stat">
-          <span class="stat-num">9+</span>
-          <span class="stat-label">Key Sessions</span>
-        </div>
-        <div class="reg-cta-stat-div"></div>
-        <div class="reg-cta-stat">
-          <span class="stat-num">BGC</span>
-          <span class="stat-label">Grand Hyatt Manila</span>
-        </div>
+        <div class="reg-cta-stat"><span class="stat-num">13</span><span class="stat-label">August 2026</span></div>
+        <div class="reg-cta-div"></div>
+        <div class="reg-cta-stat"><span class="stat-num">1</span><span class="stat-label">Full Day</span></div>
+        <div class="reg-cta-div"></div>
+        <div class="reg-cta-stat"><span class="stat-num">9+</span><span class="stat-label">Sessions</span></div>
+        <div class="reg-cta-div"></div>
+        <div class="reg-cta-stat"><span class="stat-num">BGC</span><span class="stat-label">Grand Hyatt Manila</span></div>
       </div>
       <div class="reg-cta-buttons">
         <a href="https://www.theasianbanker.com/finance-philippines-2026/register-now" class="btn btn-primary btn-lg" target="_blank">Register Now</a>
-        <a href="#contact" class="btn btn-white-outline btn-lg">Contact Us</a>
+        <a href="#contact" class="btn btn-ghost btn-lg">Contact Us</a>
       </div>
     </div>
+
+    <!-- Right: what's included card -->
     <div class="reg-cta-right">
       <div class="reg-cta-card">
-        <div class="reg-cta-card-icon"><i class="fa-solid fa-ticket"></i></div>
-        <h3>Event Pass Includes</h3>
+        <div class="reg-cta-card-top">
+          <div class="reg-cta-card-icon"><i class="fa-solid fa-ticket"></i></div>
+          <h3>Event Pass Includes</h3>
+        </div>
         <ul class="reg-cta-includes">
           <li><i class="fas fa-check-circle"></i> Full access to all conference sessions</li>
-          <li><i class="fas fa-check-circle"></i> Presentation slide decks</li>
+          <li><i class="fas fa-check-circle"></i> Access to presentation slide decks</li>
           <li><i class="fas fa-check-circle"></i> On-demand video access for 6 months</li>
           <li><i class="fas fa-check-circle"></i> Networking app access</li>
           <li><i class="fas fa-check-circle"></i> Exhibition access</li>
           <li><i class="fas fa-check-circle"></i> Lunch and coffee breaks</li>
         </ul>
-        <div class="reg-cta-card-footer">
-          <a href="https://www.theasianbanker.com/finance-philippines-2026/register-now" class="btn btn-primary btn-full" target="_blank">Secure My Seat</a>
-          <a href="https://www.theasianbanker.com/finance-philippines-2026/download-brochure" class="btn btn-outline-light btn-full" target="_blank"><i class="fas fa-download"></i> Download Brochure</a>
-        </div>
+        <a href="https://www.theasianbanker.com/finance-philippines-2026/register-now" class="btn btn-primary btn-full" target="_blank">Secure My Seat</a>
+        <a href="https://www.theasianbanker.com/finance-philippines-2026/download-brochure" class="btn btn-ghost-card btn-full" target="_blank"><i class="fas fa-download"></i> Download Brochure</a>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- REGISTRATION -->
+<!-- REGISTRATION --><!-- REGISTRATION -->
 <section class="section registration-section" id="registration">
   <div class="container">
     <div class="section-header">
