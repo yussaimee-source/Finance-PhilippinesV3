@@ -385,20 +385,20 @@ ul{list-style:none}
 
 
 /* ============================================================
-   SPEAKERS DUO — 2 speakers side by side
+   SPEAKERS — 2 cards, side by side, compact & balanced
    ============================================================ */
 .speakers-section { background: var(--white); }
 
 .speakers-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin-bottom: 40px;
+  gap: 28px;
+  max-width: 820px;        /* cap width so cards don't sprawl full-container */
+  margin: 0 auto 36px;
 }
 
-.speaker-duo-card {
-  display: flex;
-  gap: 0;
+/* Each card: vertical — photo top, text bottom */
+.spk-card {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
@@ -406,66 +406,72 @@ ul{list-style:none}
   box-shadow: var(--sh-sm);
   transition: box-shadow var(--t), transform var(--t);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.speaker-duo-card:hover { box-shadow: var(--sh-lg); transform: translateY(-4px); }
-.speaker-duo-keynote { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), var(--sh-md); }
+.spk-card:hover { box-shadow: var(--sh-md); transform: translateY(-4px); }
+.spk-card-keynote { border-color: var(--gold); box-shadow: 0 0 0 1.5px var(--gold), var(--sh-sm); }
 
-.speaker-duo-badge {
-  position: absolute; top: 14px; left: 14px; z-index: 2;
+/* Badge */
+.spk-badge {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
   background: var(--gold); color: var(--white);
-  font-family: 'Montserrat', sans-serif; font-size: .64rem; font-weight: 700;
+  font-family: 'Montserrat', sans-serif; font-size: .62rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: .08em;
-  padding: 4px 12px; border-radius: 40px;
-  display: flex; align-items: center; gap: 5px;
+  padding: 3px 12px; border-radius: 40px; white-space: nowrap;
+  display: flex; align-items: center; gap: 5px; z-index: 2;
 }
 
-.speaker-duo-photo {
-  width: 200px; flex-shrink: 0;
-  background: linear-gradient(160deg, var(--blue-deep), var(--blue-mid));
+/* Photo — fixed square crop, sensible size */
+.spk-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;           /* square */
+  max-height: 240px;              /* never too tall */
+  overflow: hidden;
+  background: var(--off-white);
 }
-.speaker-duo-photo img {
-  width: 200px; height: 100%; min-height: 280px;
-  object-fit: cover; object-position: top;
+.spk-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;   /* faces stay in frame */
   display: block;
+  transition: transform .4s ease;
+}
+.spk-card:hover .spk-photo img { transform: scale(1.04); }
+
+/* Text area */
+.spk-info {
+  padding: 18px 20px 22px;
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+}
+.spk-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .97rem; font-weight: 800;
+  color: var(--blue-deep); line-height: 1.25;
+}
+.spk-role {
+  font-size: .8rem; font-weight: 700;
+  color: var(--gold); line-height: 1.35;
+}
+.spk-org {
+  font-size: .76rem; color: var(--muted); line-height: 1.35;
 }
 
-.speaker-duo-info {
-  padding: 28px 24px 24px;
-  display: flex; flex-direction: column; gap: 6px;
-  flex: 1;
-}
-.speaker-duo-info h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1rem; font-weight: 800;
-  color: var(--blue-deep); line-height: 1.2;
-  margin-top: 32px; /* clear badge */
-}
-.speaker-duo-keynote .speaker-duo-info h3 { color: var(--blue-deep); }
-.speaker-duo-role {
-  font-family: 'Montserrat', sans-serif;
-  font-size: .8rem; font-weight: 700;
-  color: var(--gold); line-height: 1.3;
-}
-.speaker-duo-org {
-  font-size: .78rem; color: var(--muted);
-  line-height: 1.4; margin-bottom: 4px;
-}
-.speaker-duo-bio {
-  font-size: .84rem; color: var(--text);
-  line-height: 1.65; flex: 1;
-}
+/* Bio button */
 .btn-bio {
-  display: inline-flex; align-items: center; gap: 7px;
-  margin-top: 14px; padding: 8px 18px;
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 12px; padding: 7px 16px;
   background: var(--blue-pale); color: var(--blue-mid);
   border: 1.5px solid var(--border); border-radius: 40px;
-  font-family: 'Montserrat', sans-serif; font-size: .72rem; font-weight: 700;
+  font-family: 'Montserrat', sans-serif; font-size: .7rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: .06em;
-  cursor: pointer; transition: all var(--t); width: fit-content;
+  cursor: pointer; transition: all var(--t);
 }
 .btn-bio:hover { background: var(--blue-mid); color: var(--white); border-color: var(--blue-mid); }
-.speaker-duo-keynote .btn-bio { background: rgba(200,146,42,.1); color: var(--gold); border-color: rgba(200,146,42,.4); }
-.speaker-duo-keynote .btn-bio:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+.spk-card-keynote .btn-bio { background: rgba(200,146,42,.1); color: var(--gold); border-color: rgba(200,146,42,.4); }
+.spk-card-keynote .btn-bio:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
 
 /* ============================================================
    BIO MODAL
@@ -683,17 +689,12 @@ ul{list-style:none}
    RESPONSIVE — new sections
    ============================================================ */
 @media(max-width:960px){
-  .speakers-duo { grid-template-columns: 1fr; }
-  .speaker-duo-photo { width: 160px; }
-  .speaker-duo-photo img { width: 160px; min-height: 220px; }
+  .speakers-duo { grid-template-columns: 1fr; max-width: 400px; }
   .reg-cta-wrap { grid-template-columns: 1fr; gap: 40px; }
   .reg-cta-card { max-width: 480px; }
 }
 @media(max-width:700px){
-  .speaker-duo-card { flex-direction: column; }
-  .speaker-duo-photo { width: 100%; }
-  .speaker-duo-photo img { width: 100%; height: 280px; min-height: unset; }
-  .speaker-duo-info h3 { margin-top: 12px; }
+  .speakers-duo { max-width: 100%; }
   .bio-modal-inner { grid-template-columns: 1fr; }
   .bio-modal-photo { border-radius: var(--r-lg) var(--r-lg) 0 0; flex-direction: row; align-items: center; gap: 16px; padding: 16px 20px; }
   .bio-modal-photo img { width: 72px; height: 86px; }
