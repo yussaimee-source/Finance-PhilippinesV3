@@ -128,26 +128,26 @@ ul{list-style:none}
 .sw-header-left .section-eyebrow{color:var(--gold-lt)}
 .sw-main-title{font-family:'Montserrat',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;color:var(--white);line-height:1.1;letter-spacing:-.02em}
 .sw-header-right p{font-size:.97rem;color:rgba(255,255,255,.65);max-width:380px;line-height:1.65}
-.sw-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:start;position:relative;z-index:1}
+.sw-grid{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:stretch;position:relative;z-index:1}
 .sw-vert-divider{background:linear-gradient(to bottom,transparent,rgba(255,255,255,.2) 20%,rgba(255,255,255,.2) 80%,transparent);align-self:stretch;margin:0 40px}
-.sw-panel{padding:0 8px}
+.sw-panel{padding:0 8px;display:flex;flex-direction:column}
 .sw-panel-label{display:flex;align-items:center;gap:14px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.12)}
 .sw-label-icon{width:48px;height:48px;border-radius:12px;background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.2rem;flex-shrink:0}
 .sw-icon-gold{background:rgba(200,146,42,.2);border-color:rgba(200,146,42,.5);color:var(--gold-lt)}
 .sw-panel-label h3{font-family:'Montserrat',sans-serif;font-size:clamp(1.25rem,2.5vw,1.7rem);font-weight:800;color:var(--white);line-height:1.1}
-.sessions-list{display:flex;flex-direction:column;gap:8px}
+.sessions-list{display:flex;flex-direction:column;gap:8px;flex:1}
 .session-item{display:flex;align-items:flex-start;gap:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-left:3px solid transparent;border-radius:var(--r-lg);padding:14px 18px;transition:all .2s ease}
 .session-item:hover{background:rgba(255,255,255,.10);border-left-color:var(--gold-lt);transform:translateX(5px)}
 .session-num{font-family:'Montserrat',sans-serif;font-size:.68rem;font-weight:900;color:var(--gold-lt);letter-spacing:.06em;flex-shrink:0;min-width:22px;padding-top:2px}
 .session-text{font-size:.92rem;color:rgba(255,255,255,.88);line-height:1.45}
 .who-intro{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:22px}
-.who-list{display:flex;flex-direction:column;gap:10px}
+.who-list{display:flex;flex-direction:column;gap:10px;flex:1}
 .who-list li{display:flex;align-items:flex-start;gap:14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-left:3px solid transparent;border-radius:var(--r-lg);padding:14px 18px;transition:all .2s ease}
 .who-list li:hover{background:rgba(255,255,255,.10);border-left-color:var(--gold-lt);transform:translateX(5px)}
 .who-icon{width:36px;height:36px;border-radius:10px;background:rgba(200,146,42,.15);border:1.5px solid rgba(200,146,42,.35);display:flex;align-items:center;justify-content:center;color:var(--gold-lt);font-size:.85rem;flex-shrink:0;margin-top:1px}
 .who-text strong{display:block;font-family:'Montserrat',sans-serif;font-size:.87rem;font-weight:700;color:var(--white);margin-bottom:2px}
 .who-text span{font-size:.81rem;color:rgba(255,255,255,.6);line-height:1.4}
-.sw-cta{margin-top:28px}
+.sw-cta{margin-top:auto;padding-top:28px}
 
 /* AGENDA */
 .agenda-section{background:var(--off-white)}
@@ -249,13 +249,13 @@ ul{list-style:none}
 /* REGISTRATION */
 .registration-section{background:var(--white)}
 .reg-cards{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:36px}
-.reg-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;box-shadow:var(--sh-sm)}
+.reg-card{background:var(--white);border:1px solid var(--border);border-radius:var(--r-lg);padding:32px;box-shadow:var(--sh-sm);display:flex;flex-direction:column}
 .reg-card-featured{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold),var(--sh-md)}
 .reg-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
 .reg-card-header h3{font-family:'Montserrat',sans-serif;font-size:1.05rem;font-weight:700;color:var(--blue-deep)}
 .reg-badge{background:var(--blue-deep);color:var(--white);font-family:'Montserrat',sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:4px 12px;border-radius:40px}
 .reg-badge-gold{background:var(--gold)}
-.reg-features{margin-bottom:24px}
+.reg-features{margin-bottom:24px;flex:1}
 .reg-features li{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--text);margin-bottom:10px;line-height:1.45}
 .reg-features li i{color:var(--gold);font-size:.76rem;margin-top:4px;flex-shrink:0}
 .reg-policy{background:var(--off-white);border-left:4px solid var(--blue-mid);border-radius:0 var(--r) var(--r) 0;padding:20px 24px;margin-bottom:36px}
