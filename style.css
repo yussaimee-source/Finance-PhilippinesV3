@@ -395,8 +395,8 @@ ul{list-style:none}
 .speakers-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 480px;
+  gap: 32px;
+  max-width: 400px;
   margin: 0 auto 40px;
 }
 
@@ -410,17 +410,18 @@ ul{list-style:none}
   box-shadow: none;
 }
 
-/* Photo — fixed small size, centred */
+/* Photo — hard fixed size, nothing can override */
 .spk-photo {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  margin: 0 auto 16px;
+  width: 140px !important;
+  height: 140px !important;
+  max-width: 140px !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  display: block !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  margin: 0 auto 16px !important;
 }
 
 .spk-info {
