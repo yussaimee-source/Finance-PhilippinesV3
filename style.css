@@ -418,8 +418,8 @@ ul{list-style:none}
 .spk-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(11,36,99,.18); }
 
 /* Card colour variants — cream tinted to palette */
-.spk-card-ana    { background: #eef3fb; }   /* soft blue-cream */
-.spk-card-marlon { background: #e8f0f8; }   /* slightly deeper blue-cream */
+.spk-card-ana    { background: #f8faff; }
+.spk-card-marlon { background: #f4f7fc; }
 
 /* ── SMALL CIRCLE — top-left corner (like sample) ── */
 .spk-shape-circle-sm {
@@ -429,8 +429,8 @@ ul{list-style:none}
   top: -12px; left: -12px;
   z-index: 1;
 }
-.spk-card-ana    .spk-shape-circle-sm { background: #1e5ab8; }
-.spk-card-marlon .spk-shape-circle-sm { background: #0b2463; }
+.spk-card-ana    .spk-shape-circle-sm { background: #bdd1f0; }
+.spk-card-marlon .spk-shape-circle-sm { background: #a8c2e8; }
 
 /* ── LARGE QUARTER-CIRCLE — bottom-left (like sample) ── */
 .spk-shape-circle-lg {
@@ -440,8 +440,8 @@ ul{list-style:none}
   bottom: -60px; left: -60px;
   z-index: 1;
 }
-.spk-card-ana    .spk-shape-circle-lg { background: #3a7bd5; opacity: .55; }
-.spk-card-marlon .spk-shape-circle-lg { background: #133e8e; opacity: .55; }
+.spk-card-ana    .spk-shape-circle-lg { background: #90b8e8; opacity: .45; }
+.spk-card-marlon .spk-shape-circle-lg { background: #7aaad8; opacity: .40; }
 
 /* ── ARCH SHAPE — tall rounded rect, centered upper area ── */
 .spk-shape-arch {
@@ -455,8 +455,8 @@ ul{list-style:none}
   border-radius: 999px 999px 80px 80px;   /* full semicircle top, gentle bottom corners */
   z-index: 2;
 }
-.spk-card-ana    .spk-shape-arch { background: linear-gradient(175deg, #133e8e 0%, #1e5ab8 50%, #3a7bd5 100%); }
-.spk-card-marlon .spk-shape-arch { background: linear-gradient(175deg, #0b2463 0%, #133e8e 50%, #1e5ab8 100%); }
+.spk-card-ana    .spk-shape-arch { background: linear-gradient(175deg, #dce8f8 0%, #c8dcf5 100%); }
+.spk-card-marlon .spk-shape-arch { background: linear-gradient(175deg, #d0e0f4 0%, #bbcfef 100%); }
 
 /* ── PHOTO — floats above all shapes, full card width, no clip ── */
 .spk-photo-wrap {
