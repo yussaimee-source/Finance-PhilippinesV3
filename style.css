@@ -388,7 +388,10 @@ ul{list-style:none}
 
 
 /* ============================================================
-   SPEAKERS — arch portrait card (matches sample design)
+   SPEAKERS — exact replica of sample design
+   Card: cream bg · arch shape · small circle top-left · large quarter-circle bottom-left
+   Photo floats in front of shapes, NOT clipped
+   Blue colour palette instead of orange
    ============================================================ */
 .speakers-section { background: var(--white); }
 
@@ -396,128 +399,139 @@ ul{list-style:none}
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  max-width: 760px;
+  max-width: 720px;
   margin: 0 auto 40px;
 }
 
-/* Outer card — no hard border, clean white */
+/* ── CARD — cream/light background like sample ── */
 .spk-card {
-  background: var(--white);
+  position: relative;
   border-radius: 24px;
-  overflow: visible;
+  overflow: hidden;          /* clips the large quarter-circle to card edge */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 28px;
+  transition: transform .25s ease, box-shadow .25s ease;
+  box-shadow: 0 4px 24px rgba(11,36,99,.10);
+}
+.spk-card:hover { transform: translateY(-6px); box-shadow: 0 12px 40px rgba(11,36,99,.18); }
+
+/* Card colour variants — cream tinted to palette */
+.spk-card-ana    { background: #eef3fb; }   /* soft blue-cream */
+.spk-card-marlon { background: #e8f0f8; }   /* slightly deeper blue-cream */
+
+/* ── SMALL CIRCLE — top-left corner (like sample) ── */
+.spk-shape-circle-sm {
+  position: absolute;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  top: -12px; left: -12px;
+  z-index: 1;
+}
+.spk-card-ana    .spk-shape-circle-sm { background: #1e5ab8; }
+.spk-card-marlon .spk-shape-circle-sm { background: #0b2463; }
+
+/* ── LARGE QUARTER-CIRCLE — bottom-left (like sample) ── */
+.spk-shape-circle-lg {
+  position: absolute;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  bottom: -60px; left: -60px;
+  z-index: 1;
+}
+.spk-card-ana    .spk-shape-circle-lg { background: #3a7bd5; opacity: .55; }
+.spk-card-marlon .spk-shape-circle-lg { background: #133e8e; opacity: .55; }
+
+/* ── ARCH SHAPE — tall rounded rect, centered upper area ── */
+.spk-shape-arch {
+  position: absolute;
+  width: 72%;
+  /* top of arch: from top of card; bottom sits ~60% down */
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 68%;
+  border-radius: 999px 999px 80px 80px;   /* full semicircle top, gentle bottom corners */
+  z-index: 2;
+}
+.spk-card-ana    .spk-shape-arch { background: linear-gradient(175deg, #133e8e 0%, #1e5ab8 50%, #3a7bd5 100%); }
+.spk-card-marlon .spk-shape-arch { background: linear-gradient(175deg, #0b2463 0%, #133e8e 50%, #1e5ab8 100%); }
+
+/* ── PHOTO — floats above all shapes, full card width, no clip ── */
+.spk-photo-wrap {
+  position: relative;
+  z-index: 3;                /* above arch and circles */
+  width: 100%;
+  padding-top: 24px;         /* breathing room at top */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* fixed height for the photo area — matches sample proportions */
+  height: 320px;
+}
+.spk-photo-wrap img {
+  display: block;
+  width: auto;
+  max-width: 90%;
+  height: 100%;
+  object-fit: contain;       /* keep full body visible, no cropping */
+  object-position: bottom;   /* align to bottom of photo area */
+  filter: drop-shadow(0 6px 20px rgba(0,0,0,.22));
+}
+
+/* ── INFO BELOW PHOTO ── */
+.spk-info {
+  position: relative; z-index: 3;
+  padding: 18px 20px 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  position: relative;
-  transition: transform var(--t);
-}
-.spk-card:hover { transform: translateY(-6px); }
-
-/* ── ARCH FRAME ── */
-.spk-arch-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto 0;
-}
-
-/* The arch shape: tall rounded rectangle — top is a half-circle */
-.spk-arch-bg {
-  position: absolute;
-  inset: 0;
-  border-radius: 999px 999px 80px 80px;   /* full arch top, softer bottom */
-  z-index: 0;
-}
-.spk-arch-bg-ana {
-  background: linear-gradient(160deg, #c8922a 0%, #f0b740 60%, #e8a020 100%);
-}
-.spk-arch-bg-marlon {
-  background: linear-gradient(160deg, #0b2463 0%, #133e8e 60%, #1e5ab8 100%);
-}
-
-/* Decorative circles — top-left and bottom-right like the sample */
-.spk-arch-dot {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 1;
-}
-.spk-arch-dot-tl {
-  width: 48px; height: 48px;
-  top: -10px; left: -10px;
-  background: rgba(255,255,255,.28);
-}
-.spk-arch-dot-br {
-  width: 72px; height: 72px;
-  bottom: -16px; right: -16px;
-  background: rgba(255,255,255,.18);
-}
-.spk-arch-dot-blue.spk-arch-dot-tl { background: rgba(255,255,255,.18); }
-.spk-arch-dot-blue.spk-arch-dot-br { background: rgba(255,255,255,.12); }
-
-/* The portrait photo sits inside the arch */
-.spk-arch-photo {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 999px 999px 60px 60px;  /* matches arch */
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.18));
-}
-
-/* ── INFO BELOW ARCH ── */
-.spk-info {
-  padding: 22px 16px 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 5px;
 }
 
-/* Badge tag */
-.spk-keynote-tag {
+/* Tag badge */
+.spk-tag {
   display: inline-flex; align-items: center; gap: 5px;
-  background: rgba(200,146,42,.12); color: var(--gold);
-  border: 1.5px solid rgba(200,146,42,.35);
-  font-family: 'Montserrat', sans-serif; font-size: .64rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: .08em;
-  padding: 3px 12px; border-radius: 40px;
-  margin-bottom: 4px;
+  font-family: 'Montserrat', sans-serif; font-size: .62rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .09em;
+  padding: 3px 12px; border-radius: 40px; margin-bottom: 4px;
 }
-.spk-tag-blue {
-  background: rgba(19,62,142,.10); color: var(--blue-mid);
-  border-color: rgba(19,62,142,.25);
-}
+.spk-tag-gold { background: rgba(200,146,42,.14); color: var(--gold); border: 1.5px solid rgba(200,146,42,.4); }
+.spk-tag-blue { background: rgba(19,62,142,.12); color: var(--blue-mid); border: 1.5px solid rgba(19,62,142,.3); }
 
 .spk-name {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.05rem; font-weight: 800;
+  font-size: 1rem; font-weight: 800;
   color: var(--blue-deep); line-height: 1.2;
 }
 .spk-role {
-  font-size: .82rem; font-weight: 700;
-  color: var(--gold); line-height: 1.35;
+  font-size: .8rem; font-weight: 700;
+  color: var(--blue-mid); line-height: 1.3;
 }
-.spk-org {
-  font-size: .76rem; color: var(--muted); line-height: 1.35;
-}
+.spk-org { font-size: .74rem; color: var(--muted); line-height: 1.3; }
 
 /* Bio button */
 .btn-bio {
   display: inline-flex; align-items: center; gap: 7px;
-  margin-top: 14px; padding: 8px 20px;
-  background: var(--blue-pale); color: var(--blue-mid);
-  border: 1.5px solid var(--border); border-radius: 40px;
+  margin-top: 12px; padding: 8px 20px;
+  border-radius: 40px;
   font-family: 'Montserrat', sans-serif; font-size: .7rem; font-weight: 700;
   text-transform: uppercase; letter-spacing: .06em;
-  cursor: pointer; transition: all var(--t);
+  cursor: pointer; transition: all .22s ease; border: 1.5px solid transparent;
 }
-.btn-bio:hover { background: var(--blue-mid); color: var(--white); border-color: var(--blue-mid); transform: translateY(-2px); }
-.btn-bio-gold { background: rgba(200,146,42,.10); color: var(--gold); border-color: rgba(200,146,42,.4); }
-.btn-bio-gold:hover { background: var(--gold); color: var(--white); border-color: var(--gold); }
+.btn-bio:hover { transform: translateY(-2px); }
+.btn-bio-gold { background: rgba(200,146,42,.12); color: var(--gold); border-color: rgba(200,146,42,.4); }
+.btn-bio-gold:hover { background: var(--gold); color: var(--white); }
+.btn-bio-blue { background: var(--blue-pale); color: var(--blue-mid); border-color: rgba(19,62,142,.25); }
+.btn-bio-blue:hover { background: var(--blue-mid); color: var(--white); }
+
+/* Responsive */
+@media(max-width:640px){
+  .speakers-duo { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; }
+  .spk-photo-wrap { height: 260px; }
+}
 
 /* ============================================================
    BIO MODAL
