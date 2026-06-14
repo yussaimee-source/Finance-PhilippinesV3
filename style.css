@@ -395,8 +395,8 @@ ul{list-style:none}
 .speakers-duo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  max-width: 400px;
+  gap: 40px;
+  max-width: 600px;
   margin: 0 auto 40px;
 }
 
@@ -410,13 +410,10 @@ ul{list-style:none}
   box-shadow: none;
 }
 
-/* Photo — hard fixed size, nothing can override */
 .spk-photo {
-  width: 140px !important;
-  height: 140px !important;
-  max-width: 140px !important;
-  object-fit: cover !important;
-  object-position: center top !important;
+  width: 240px !important;
+  height: auto !important;
+  max-width: 240px !important;
   display: block !important;
   border: none !important;
   box-shadow: none !important;
