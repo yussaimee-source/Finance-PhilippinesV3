@@ -410,15 +410,15 @@ ul{list-style:none}
   box-shadow: none;
 }
 
-/* Photo — full width of card column, no crop, no frame */
+/* Photo — 50% width, centred, no frame */
 .spk-photo {
-  width: 100%;
+  width: 50%;
   height: auto;
   display: block;
   border: none;
   box-shadow: none;
   border-radius: 0;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .spk-info {
