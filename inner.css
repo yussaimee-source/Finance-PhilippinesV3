@@ -141,3 +141,128 @@
   .agenda-inner-time { padding: 16px 0 4px; text-align: left; }
   .agenda-inner-body { margin-left: 0; }
 }
+
+/* ============================================================
+   REGISTER NOW PAGE
+   ============================================================ */
+.reg-tiers {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; margin-bottom: 48px; max-width: 860px; margin-left: auto; margin-right: auto;
+}
+.reg-tier-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); overflow: hidden;
+  box-shadow: var(--sh-sm); display: flex; flex-direction: column;
+  transition: box-shadow var(--t), transform var(--t);
+}
+.reg-tier-card:hover { box-shadow: var(--sh-md); transform: translateY(-4px); }
+.reg-tier-featured { border-color: var(--gold); box-shadow: 0 0 0 2px var(--gold); }
+.reg-tier-header {
+  background: var(--blue-deep); padding: 32px 28px 24px;
+  text-align: center;
+}
+.reg-tier-featured .reg-tier-header { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); }
+.reg-tier-header h2 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 800;
+  color: var(--white); margin-bottom: 16px;
+}
+.reg-tier-price { text-align: center; }
+.price-main {
+  display: block; font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem; font-weight: 900; color: var(--gold-lt); line-height: 1;
+}
+.price-early {
+  display: block; font-size: .82rem; color: rgba(255,255,255,.65);
+  margin-top: 6px; line-height: 1.4;
+}
+.price-early em { font-style: normal; color: rgba(255,255,255,.5); }
+.reg-tier-body { padding: 24px 28px; flex: 1; }
+.reg-tier-includes-label {
+  font-family: 'Montserrat', sans-serif; font-size: .74rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
+  margin-bottom: 14px;
+}
+.reg-tier-includes { display: flex; flex-direction: column; gap: 10px; }
+.reg-tier-includes li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: .9rem; color: var(--text); line-height: 1.45;
+}
+.reg-tier-includes li i { color: var(--green); font-size: .85rem; margin-top: 2px; flex-shrink: 0; }
+.reg-tier-footer { padding: 0 28px 28px; }
+
+.reg-form-section { margin-bottom: 40px; }
+.reg-form-title-row { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.reg-form-title-row h3 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--blue-deep); }
+.reg-form-tag { background: var(--gold); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: .76rem; font-weight: 700; padding: 3px 12px; border-radius: 40px; }
+
+.terms-box {
+  background: var(--off-white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 28px 32px; margin-top: 40px;
+}
+.terms-box h4 {
+  font-family: 'Montserrat', sans-serif; font-size: .82rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--blue-deep);
+  margin-bottom: 14px;
+}
+.terms-box p { font-size: .82rem; color: var(--muted); line-height: 1.7; margin-bottom: 10px; }
+.terms-box p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   DOWNLOAD BROCHURE PAGE
+   ============================================================ */
+.brochure-layout {
+  display: grid; grid-template-columns: 380px 1fr;
+  gap: 48px; align-items: start; margin-bottom: 40px;
+}
+.brochure-preview {
+  background: var(--blue-deep); border-radius: var(--r-lg);
+  overflow: hidden; margin-bottom: 24px; position: relative;
+}
+.brochure-preview-img { position: relative; aspect-ratio: 3/4; overflow: hidden; }
+.brochure-preview-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.brochure-no-img { background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid)); aspect-ratio: 3/4; }
+.brochure-preview-badge {
+  position: absolute; bottom: 12px; left: 12px;
+  background: var(--gold); color: var(--white);
+  font-family: 'Montserrat', sans-serif; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em;
+  padding: 5px 14px; border-radius: 40px;
+  display: flex; align-items: center; gap: 6px;
+}
+.brochure-what-inside h3 {
+  font-family: 'Montserrat', sans-serif; font-size: .85rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--blue-deep);
+  margin-bottom: 14px;
+}
+.brochure-features { display: flex; flex-direction: column; gap: 10px; }
+.brochure-features li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: .9rem; color: var(--text); line-height: 1.45;
+}
+.brochure-features li i { color: var(--gold); font-size: .85rem; margin-top: 2px; flex-shrink: 0; }
+
+.interest-checks { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+
+.submit-loading, .submit-success {
+  display: flex; align-items: center; gap: 12px;
+  padding: 16px 20px; border-radius: var(--r-lg);
+  font-size: .9rem; margin-top: 12px;
+}
+.submit-loading { background: var(--blue-pale); color: var(--blue-mid); }
+.submit-loading i { font-size: 1.2rem; }
+.submit-success {
+  background: rgba(57,181,74,.1); color: var(--green-dark);
+  border: 1px solid rgba(57,181,74,.3);
+  flex-direction: column; align-items: flex-start;
+}
+.submit-success i { font-size: 1.5rem; color: var(--green); }
+.submit-success p { font-size: .88rem; line-height: 1.6; }
+
+@media(max-width:860px){
+  .reg-tiers { grid-template-columns: 1fr; max-width: 480px; }
+  .brochure-layout { grid-template-columns: 1fr; }
+  .brochure-preview-img { aspect-ratio: 16/9; }
+}
+@media(max-width:600px){
+  .reg-tiers { max-width: 100%; }
+}
