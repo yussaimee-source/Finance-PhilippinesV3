@@ -699,3 +699,56 @@ ul{list-style:none}
   .sponsor-cta-box { flex-direction: column; text-align: center; }
   .sponsor-cta-btns { justify-content: center; }
 }
+
+/* ============================================================
+   NAVBAR SUB-MENUS — matching TAB reference layout
+   ============================================================ */
+.nav-links li { position: relative; }
+
+.nav-arrow {
+  font-size: .55rem; margin-left: 4px;
+  vertical-align: middle; opacity: .6;
+  transition: transform var(--t);
+}
+.has-sub:hover .nav-arrow { transform: rotate(180deg); }
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-lg);
+  min-width: 220px;
+  z-index: 2000;
+  padding: 6px 0;
+  list-style: none;
+}
+.has-sub:hover .sub-menu { display: block; }
+
+.sub-menu li a {
+  display: block;
+  padding: 10px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .78rem; font-weight: 600;
+  color: var(--text); letter-spacing: .02em;
+  text-transform: none;
+  border-radius: 0;
+  white-space: nowrap;
+  transition: background var(--t), color var(--t);
+}
+.sub-menu li a:hover { background: var(--off-white); color: var(--blue-mid); }
+
+/* On mobile — sub-menu becomes inline */
+@media(max-width:860px){
+  .sub-menu {
+    position: static; box-shadow: none; border: none;
+    background: var(--off-white); border-radius: var(--r);
+    padding: 4px 0 4px 12px; display: none;
+  }
+  .has-sub.open .sub-menu { display: block; }
+  .has-sub > a { display: flex; justify-content: space-between; align-items: center; }
+  .sub-menu li a { font-size: .74rem; padding: 8px 14px; }
+}

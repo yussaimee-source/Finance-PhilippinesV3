@@ -29,23 +29,40 @@
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="nav-inner">
-    <a href="#home" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <img src="TAB-Finance_Philippines-logo-01.svg" alt="Finance Philippines 2026" class="nav-logo-img"/>
     </a>
     <button class="nav-toggle" id="navToggle"><i class="fas fa-bars"></i></button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#sessions">Sessions</a></li>
-      <li><a href="#agenda">Agenda</a></li>
-      <li><a href="#speakers">Speakers</a></li>
-      <li><a href="#sponsors">Sponsors</a></li>
-      <li><a href="#registration">Register</a></li>
-      <li><a href="#venue">Venue</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="has-sub">
+        <a href="index.html">Home <i class="fas fa-chevron-down nav-arrow"></i></a>
+        <ul class="sub-menu">
+          <li><a href="index.html">Finance Philippines 2026</a></li>
+          <li><a href="https://www.theasianbanker.com" target="_blank">The Asian Banker</a></li>
+          <li><a href="https://tab.global/" target="_blank">TAB Global</a></li>
+        </ul>
+      </li>
+      <li><a href="agenda.html">Agenda</a></li>
+      <li class="has-sub">
+        <a href="speakers.html">Speakers <i class="fas fa-chevron-down nav-arrow"></i></a>
+        <ul class="sub-menu">
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="contact.html">Become a Speaker</a></li>
+        </ul>
+      </li>
+      <li class="has-sub">
+        <a href="sponsors.html">Sponsors <i class="fas fa-chevron-down nav-arrow"></i></a>
+        <ul class="sub-menu">
+          <li><a href="sponsors.html">Sponsors &amp; Partners</a></li>
+          <li><a href="sponsors.html#why">Why Sponsor</a></li>
+          <li><a href="sponsors.html#become">Become a Sponsor / Exhibitor</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-ctas">
-      <a href="register.html" class="btn btn-outline-nav">Brochure</a>
-      <a href="register.html" class="btn btn-primary">Register Now</a>
+      <a href="download-brochure.html" class="btn btn-outline-nav">Download Brochure</a>
+      <a href="register-now.html" class="btn btn-primary">Register Now</a>
     </div>
   </div>
 </nav>
@@ -68,7 +85,7 @@
       <div class="hero-meta-item"><i class="fa-solid fa-location-dot"></i><span>Grand Hyatt Manila, Philippines</span></div>
     </div>
     <div class="hero-buttons">
-      <a href="register.html" class="btn btn-primary btn-lg">Register Now</a>
+      <a href="register-now.html" class="btn btn-primary btn-lg">Register Now</a>
       <a href="agenda.html" class="btn btn-ghost btn-lg">View Agenda</a>
     </div>
   </div>
@@ -90,7 +107,7 @@
         <p><strong>Finance Philippines 2026</strong> brings together senior leaders, regulators, and infrastructure providers writing the operating playbook for this new era — biased toward execution: what works, at what unit economics, with what controls.</p>
         <div class="about-actions">
           <a href="agenda.html" class="btn btn-primary">View Full Agenda</a>
-          <a href="https://www.theasianbanker.com/finance-philippines-2026/download-brochure" class="btn btn-outline" target="_blank">Download Brochure</a>
+          <a href="download-brochure.html" class="btn btn-outline">Download Brochure</a>
         </div>
       </div>
       <!-- VIDEO — 16:9 Dacast embed from reference site -->
@@ -180,7 +197,7 @@
           <li><div class="who-icon"><i class="fa-solid fa-landmark"></i></div><div class="who-text"><strong>Regulators &amp; Policymakers</strong><span>Central bank and government officials shaping the regulatory landscape</span></div></li>
           <li><div class="who-icon"><i class="fa-solid fa-rocket"></i></div><div class="who-text"><strong>Fintech &amp; Digital Bank Leaders</strong><span>Founders and executives from fintechs and digital-first institutions</span></div></li>
         </ul>
-        <a href="register.html" class="btn btn-gold sw-cta">Register Now <i class="fas fa-arrow-right"></i></a>
+        <a href="register-now.html" class="btn btn-gold sw-cta">Register Now <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -281,7 +298,7 @@
       <button class="bio-modal-close" onclick="closeBio()"><i class="fas fa-times"></i></button>
       <div class="bio-modal-inner">
         <div class="bio-modal-photo">
-          <img src="Ana-Maria.webp" alt="Ana Maria Aboitiz Delgado"/>
+          <img src="Ana-Maria.jpg" alt="Ana Maria Aboitiz Delgado"/>
           <span class="bio-modal-badge"><i class="fa-solid fa-star"></i> Keynote</span>
         </div>
         <div class="bio-modal-content">
@@ -302,7 +319,7 @@
       <button class="bio-modal-close" onclick="closeBio()"><i class="fas fa-times"></i></button>
       <div class="bio-modal-inner">
         <div class="bio-modal-photo">
-          <img src="Marlon-P.webp" alt="Marlon P. Sorongon"/>
+          <img src="Marlon-P.jpg" alt="Marlon P. Sorongon"/>
         </div>
         <div class="bio-modal-content">
           <h3>Marlon P. Sorongon</h3>
@@ -429,7 +446,7 @@
           <li><i class="fas fa-check"></i> Networking app access</li>
           <li><i class="fas fa-check"></i> Lunch and coffee breaks</li>
         </ul>
-        <a href="https://www.theasianbanker.com/finance-philippines-2026/register-now" class="btn btn-primary btn-full" target="_blank">Register Now</a>
+        <a href="register-now.html" class="btn btn-primary btn-full">Register Now</a>
       </div>
       <div class="reg-card reg-card-featured">
         <div class="reg-card-header"><h3>Sponsors &amp; Exhibitors</h3><div class="reg-badge reg-badge-gold">Partner</div></div>
@@ -465,7 +482,7 @@
         </div>
         <div class="form-row"><div class="form-group form-group-full"><label>Query About *</label><select><option value="">Please Select</option><option>Speaker</option><option>Sponsorship</option><option>Attendee</option></select></div></div>
         <div class="form-row"><div class="form-group form-group-full"><label>Message</label><textarea placeholder="Your message..." rows="4"></textarea></div></div>
-        <div class="form-row form-check-row"><label class="form-check"><input type="checkbox"/> I agree to the <a href="#">terms and conditions</a></label></div>
+        <div class="form-row form-check-row"><label class="form-check"><input type="checkbox"/> I agree to the <a href="register-now.html#terms">terms and conditions</a></label></div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </div>
@@ -510,7 +527,7 @@
         <a href="https://www.youtube.com/user/theasianbanker" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
     </div>
-    <div class="footer-links"><h5>Quick Links</h5><ul><li><a href="#about">About</a></li><li><a href="#sessions">Sessions</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="speakers.html">Speakers</a></li><li><a href="sponsors.html">Sponsors</a></li><li><a href="register.html">Register</a></li><li><a href="#venue">Venue</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-links"><h5>Quick Links</h5><ul><li><a href="#about">About</a></li><li><a href="#sessions">Sessions</a></li><li><a href="agenda.html">Agenda</a></li><li><a href="speakers.html">Speakers</a></li><li><a href="sponsors.html">Sponsors</a></li><li><a href="register-now.html">Register</a></li><li><a href="#venue">Venue</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     <div class="footer-links"><h5>The Asian Banker</h5><ul><li><a href="https://www.theasianbanker.com/tab-about-us" target="_blank">About Us</a></li><li><a href="https://www.theasianbanker.com/tab-privacy-policy" target="_blank">Privacy Policy</a></li><li><a href="https://www.theasianbanker.com/tab-contact-us" target="_blank">Contact Us</a></li><li><a href="https://www.theasianbanker.com/site-map" target="_blank">Site Map</a></li><li><a href="https://www.theasianbanker.com/legal-notice" target="_blank">Legal Notice</a></li></ul></div>
   </div>
   <div class="footer-bottom"><div class="container"><p>© 2026 Copyright The Asian Banker. All Rights Reserved. | Finance Philippines 2026</p><p class="footer-disclaimer">The Asian Banker does not provide financial advice. Views expressed belong strictly to individual authors/contributors.</p></div></div>
@@ -527,6 +544,15 @@
   // Mobile nav
   document.getElementById('navToggle').addEventListener('click', () => {
     document.getElementById('navLinks').classList.toggle('open');
+  });
+  // Mobile sub-menu toggles
+  document.querySelectorAll('.has-sub > a').forEach(a => {
+    a.addEventListener('click', e => {
+      if (window.innerWidth <= 860) {
+        e.preventDefault();
+        a.parentElement.classList.toggle('open');
+      }
+    });
   });
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
