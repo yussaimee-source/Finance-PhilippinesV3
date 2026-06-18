@@ -403,7 +403,8 @@
   });
   document.querySelectorAll('.has-sub > a').forEach(a=>{
     a.addEventListener('click',e=>{
-      if(window.innerWidth<=860){e.preventDefault();a.parentElement.classList.toggle('open');}
+      e.preventDefault();
+      if(window.innerWidth<=860){a.parentElement.classList.toggle('open');}
     });
   });
 

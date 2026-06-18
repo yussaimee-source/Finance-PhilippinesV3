@@ -175,6 +175,14 @@
   document.getElementById("navToggle").addEventListener("click",()=>{
     document.getElementById("navLinks").classList.toggle("open");
   });
+  document.querySelectorAll('.has-sub > a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault(); // parent link never navigates — it's a toggle only
+      if (window.innerWidth <= 860) {
+        a.parentElement.classList.toggle('open');
+      }
+    });
+  });
   // Dropdown on mobile tap
   document.querySelectorAll(".has-drop > a").forEach(a=>{
     a.addEventListener("click",function(e){

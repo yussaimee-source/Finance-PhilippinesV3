@@ -318,3 +318,170 @@
 @media(max-width:860px){
   .become-speaker-layout { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   SPONSORS PAGE — Co-Host / Supporting Orgs / Past Sponsors
+   improved layout matching reference content exactly
+   ============================================================ */
+.sp-block { margin-bottom: 52px; }
+.sp-block-label {
+  display: block; font-family: 'Montserrat', sans-serif;
+  font-size: .76rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .12em; color: var(--gold);
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 2px solid var(--gold);
+}
+
+/* Co-host featured card */
+.sp-cohost-card {
+  display: grid; grid-template-columns: 200px 1fr;
+  gap: 36px; align-items: start;
+  background: var(--off-white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 32px;
+}
+.sp-cohost-logo {
+  background: var(--white); border-radius: var(--r-lg);
+  border: 1px solid var(--border); padding: 20px;
+  display: flex; align-items: center; justify-content: center;
+  height: 120px;
+}
+.sp-cohost-logo img { max-width: 100%; max-height: 80px; object-fit: contain; }
+.sp-cohost-text h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.15rem; font-weight: 800;
+  color: var(--blue-deep); margin-bottom: 14px;
+}
+.sp-cohost-text p { font-size: .89rem; color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
+.sp-cohost-text p:last-child { margin-bottom: 0; }
+
+/* Supporting org / past sponsor cards grid */
+.sp-org-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.sp-org-grid-media { grid-template-columns: 1fr 1fr; }
+.sp-org-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r-lg); padding: 24px;
+  display: flex; flex-direction: column;
+  transition: box-shadow var(--t);
+}
+.sp-org-card:hover { box-shadow: var(--sh-md); }
+.sp-org-logo {
+  height: 56px; display: flex; align-items: center; margin-bottom: 16px;
+}
+.sp-org-logo img { max-height: 48px; max-width: 160px; object-fit: contain; }
+.sp-org-card h4 {
+  font-family: 'Montserrat', sans-serif; font-size: .92rem; font-weight: 700;
+  color: var(--blue-deep); margin-bottom: 10px; line-height: 1.3;
+}
+.sp-org-card p { font-size: .84rem; color: var(--muted); line-height: 1.65; flex: 1; margin-bottom: 12px; }
+.sp-visit-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Montserrat', sans-serif; font-size: .75rem; font-weight: 700;
+  color: var(--blue-mid); text-transform: uppercase; letter-spacing: .04em;
+  width: fit-content;
+}
+.sp-visit-link:hover { color: var(--gold); }
+.sp-visit-link i { font-size: .65rem; }
+
+/* Past sponsor sub-groups */
+.sp-past-group { margin-bottom: 32px; }
+.sp-past-group:last-child { margin-bottom: 0; }
+.sp-past-subhead {
+  font-family: 'Montserrat', sans-serif; font-size: .8rem; font-weight: 700;
+  color: var(--muted); text-transform: uppercase; letter-spacing: .08em;
+  margin-bottom: 16px;
+}
+
+/* CTA box */
+.sp-cta-box {
+  background: var(--blue-deep); border-radius: var(--r-lg);
+  padding: 40px 44px; text-align: center; margin-top: 12px;
+}
+.sp-cta-box h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800;
+  color: var(--white); margin-bottom: 12px;
+}
+.sp-cta-box p {
+  color: rgba(255,255,255,.74); font-size: .94rem;
+  max-width: 540px; margin: 0 auto 28px; line-height: 1.65;
+}
+.sp-cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+@media(max-width:768px){
+  .sp-cohost-card { grid-template-columns: 1fr; text-align: center; }
+  .sp-cohost-logo { margin: 0 auto; max-width: 200px; }
+  .sp-org-grid, .sp-org-grid-media { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   SPEAKERS PAGE — Current (featured) + Past (smaller, line 2)
+   ============================================================ */
+.current-spk-label {
+  font-family: 'Montserrat', sans-serif; font-size: .76rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .12em; color: var(--green);
+  margin-bottom: 20px;
+}
+.current-spk-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 40px; max-width: 640px; margin: 0 auto 56px;
+}
+.current-spk-card {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  position: relative;
+}
+.current-spk-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: 'Montserrat', sans-serif; font-size: .64rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .08em;
+  padding: 4px 14px; border-radius: 40px; margin-bottom: 14px;
+}
+.current-spk-badge-gold { background: rgba(200,146,42,.13); color: var(--gold); border: 1.5px solid rgba(200,146,42,.35); }
+.current-spk-badge-blue { background: rgba(19,62,142,.10); color: var(--blue-mid); border: 1.5px solid rgba(19,62,142,.25); }
+.current-spk-photo {
+  width: 220px; height: 220px; border-radius: 50%;
+  overflow: hidden; margin-bottom: 18px;
+  border: 4px solid var(--white); box-shadow: var(--sh-md);
+}
+.current-spk-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.current-spk-card h3 {
+  font-family: 'Montserrat', sans-serif; font-size: 1.1rem; font-weight: 800;
+  color: var(--blue-deep); margin-bottom: 6px;
+}
+.current-spk-role { font-size: .85rem; font-weight: 700; color: var(--gold); margin-bottom: 2px; }
+.current-spk-org { font-size: .78rem; color: var(--muted); margin-bottom: 4px; }
+
+/* Past speakers — demoted second line */
+.past-spk-header { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.past-spk-label {
+  font-family: 'Montserrat', sans-serif; font-size: .72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .1em; color: var(--muted);
+  white-space: nowrap;
+}
+.past-spk-line { flex: 1; height: 1px; background: var(--border); }
+
+.past-spk-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 16px; margin-bottom: 40px;
+}
+.past-spk-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--r); padding: 12px 10px 14px;
+  text-align: center; transition: box-shadow var(--t), transform var(--t);
+}
+.past-spk-card:hover { box-shadow: var(--sh-sm); transform: translateY(-2px); }
+.past-spk-img {
+  width: 64px; height: 64px; border-radius: 50%;
+  overflow: hidden; margin: 0 auto 8px; background: var(--off-white);
+}
+.past-spk-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.past-spk-card h5 {
+  font-family: 'Montserrat', sans-serif; font-size: .68rem; font-weight: 700;
+  color: var(--blue-deep); line-height: 1.3; margin-bottom: 3px;
+}
+.past-spk-card p { font-size: .6rem; color: var(--muted); line-height: 1.3; }
+
+@media(max-width:900px){
+  .past-spk-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media(max-width:640px){
+  .current-spk-grid { grid-template-columns: 1fr; max-width: 280px; }
+  .past-spk-grid { grid-template-columns: repeat(3, 1fr); }
+}

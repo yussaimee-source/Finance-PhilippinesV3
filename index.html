@@ -488,8 +488,8 @@
   // Mobile sub-menu toggles
   document.querySelectorAll('.has-sub > a').forEach(a => {
     a.addEventListener('click', e => {
+      e.preventDefault();
       if (window.innerWidth <= 860) {
-        e.preventDefault();
         a.parentElement.classList.toggle('open');
       }
     });

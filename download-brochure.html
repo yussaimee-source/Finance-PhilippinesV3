@@ -82,9 +82,8 @@
       <div class="brochure-left">
         <div class="brochure-preview">
           <div class="brochure-preview-img">
-            <img src="https://www.theasianbanker.com/finance-philippines-2026/images/slider/TAB-FinancePhilippine2025-thumbnails.png"
-              alt="Finance Philippines 2026 Brochure Preview"
-              onerror="this.parentElement.classList.add('brochure-no-img')"/>
+            <img src="Finance_Phillipines-2026-BROCHURE.jpg"
+              alt="Finance Philippines 2026 Brochure Preview"/>
             <div class="brochure-preview-badge"><i class="fas fa-file-pdf"></i> Event Brochure</div>
           </div>
         </div>
@@ -223,6 +222,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
   });
   document.getElementById("navToggle").addEventListener("click",()=>{
     document.getElementById("navLinks").classList.toggle("open");
+  });
+  document.querySelectorAll('.has-sub > a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault(); // parent link never navigates — it's a toggle only
+      if (window.innerWidth <= 860) {
+        a.parentElement.classList.toggle('open');
+      }
+    });
   });
   // Dropdown on mobile tap
   document.querySelectorAll(".has-drop > a").forEach(a=>{
